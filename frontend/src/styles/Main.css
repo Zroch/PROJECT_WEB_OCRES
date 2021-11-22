@@ -1,0 +1,46 @@
+.top{
+    height: 140px;
+    background: #FFFAF7;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.mid{
+    height: 500px;
+    background: #FFFAF7;    
+    border: 1px solid #DFE0EB;
+    box-sizing: border-box;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-top: 10%;
+}
+.bot{
+    height: 180px;
+    background: #FFFAF7;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-top: 10%;
+}
+
+.butts{
+    width: 15%;
+    height: 50%;
+    background: #FFE6E0;
+    border-radius: 20px;
+    text-align: center;
+    font-family: Roboto;
+    margin-left : 1%;
+    margin-top: 4%;
+}
+
+.font{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    color: #252733;  
+}
