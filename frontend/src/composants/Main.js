@@ -1,4 +1,5 @@
 import '../styles/Main.css';
+import Bottom from "./Bottom";
 import React from "react";
 
 //Constantes
@@ -34,19 +35,16 @@ function Infoebutton(props){
     render(){
       return(
         <div>
-        <div>
+          <div>
             <div>
-                <p>Donnée: {this.props.donnee}</p>
-            </div>
-            <div>
-                <p>Info: {this.props.info}</p>
+                <p> Données : {this.props.donnee}</p>
             </div>
           </div>
         </div>
   
       )
     }
-  }
+  } 
 
 //Affichage de la page
 class Main extends React.Component {
@@ -91,8 +89,7 @@ class Main extends React.Component {
                 </div>
 
                 <div class = "row">
-                    <div className="bot">
-                    </div>
+                    <Bottom />
                 </div>
         
         </div>
