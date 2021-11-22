@@ -10,20 +10,26 @@ function Aside() {
       
       <h1 className="nom">Navig Today</h1>
       <ul>
-        <NavLink to="/"  className="hover" id="un"
-        activeClassName="nav-active">
-          Overview
-        </NavLink>
+        <li class="row">
+          <NavLink to="/"  className="hover" id="un"
+          activeClassName="nav-active">
+            Overview
+          </NavLink>
+        </li>
 
-        <NavLink to="contact"  className="hover" id="deux"
-        activeClassName="nav-active">
-          Contact
-        </NavLink>
+        <li class="row">
+          <NavLink to="contact"  className="hover" id="deux"
+          activeClassName="nav-active">
+            Contact
+          </NavLink>
+        </li>
 
-        <NavLink to="plusinfo"  className="hover" id="trois"
-        activeClassName="nav-active">
-          Plus d'infos
-        </NavLink>
+        <li class = "row" >
+          <NavLink to="plusinfo"  className="hover" id="trois"
+          activeClassName="nav-active">
+            Plus d'infos
+          </NavLink>
+        </li>
       </ul>
 
     </div>

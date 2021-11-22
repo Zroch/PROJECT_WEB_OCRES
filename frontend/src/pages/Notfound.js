@@ -1,6 +1,7 @@
 import '../styles/Home.css';
 import Aside from '../composants/Aside';
 import Error from '../composants/Error';
+import React from "react";
 
 function Notfound() {
   return (

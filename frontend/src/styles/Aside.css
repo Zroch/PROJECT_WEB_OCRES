@@ -1,4 +1,5 @@
 .tool{
+    
     height: 100%;
     background: #1E1F25;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);   
@@ -14,6 +15,7 @@
     color: white;
     text-align: center;
     padding-top: 10%;
+    padding-bottom: 50%;
 }
 
 .hover{
@@ -25,21 +27,6 @@
     letter-spacing: 0.4px;
     color: white;
     text-align: center;
-  
-}
-/*
-#un{
-    padding-top: 50%;
+    text-decoration: none;
 }
 
-#deux{
-
-}
-
-#trois{
-
-}*/
-
-.ul{
-    margin-top: 50%;
-}

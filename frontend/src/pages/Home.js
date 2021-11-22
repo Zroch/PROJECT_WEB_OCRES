@@ -1,7 +1,7 @@
 import '../styles/Home.css';
 import Aside from '../composants/Aside';
 import Main from '../composants/Main';
-
+import React from 'react';
 
 function Home () {
 

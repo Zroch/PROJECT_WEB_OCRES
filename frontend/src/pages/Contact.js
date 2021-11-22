@@ -1,6 +1,7 @@
 import '../styles/Home.css';
 import Aside from '../composants/Aside';
 import ContactForm from '../composants/ContactForm';
+import React from "react";
 
 function App() {
   return (

@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import './styles/index.css';
 import App from './App';
-import reportWebVitals from './js/reportWebVitals';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -21,4 +20,4 @@ ReactDOM.render(
 
 
 
-reportWebVitals();
+
