@@ -2,13 +2,12 @@
 import "../styles/Settings.css";
 import React, { Component } from "react";
 
-
 class Settings extends Component {
   state = {
     city: "Brest"
   };
 
-  handleChange = event => {
+  handleClick = event => {
     this.setState({ city: event.target.value });
   };
 
@@ -22,8 +21,8 @@ class Settings extends Component {
           type="text"
           name="Ville"
           value={city}
-          onChange={this.handleChange}
         />
+        <button onClick={this.handleClick}> cliquez pour actualiser</button>
       </div>
     );
   }

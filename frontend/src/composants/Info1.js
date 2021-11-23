@@ -1,7 +1,7 @@
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
-
+import Apitest from '../js/Apitest';
 
 class Info1 extends React.Component {
 
@@ -45,7 +45,7 @@ class Info1 extends React.Component {
 
         <div class="row">
           <div className="mid">
-            Info1
+            <Apitest />
           </div>
         </div>
 
