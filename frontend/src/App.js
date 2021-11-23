@@ -11,6 +11,7 @@ import Information1 from './pages/Information1';
 import Information2 from './pages/Information2';
 import Information3 from './pages/Information3';
 import Information4 from './pages/Information4';
+
 //Fonction principale qui gère toutes les pages
 function App() {
   return (
