@@ -1,9 +1,9 @@
 
-import "../styles/Bottom.css";
+import "../styles/Settings.css";
 import React, { Component } from "react";
 
 
-class Bottom extends Component {
+class Settings extends Component {
   state = {
     city: "Brest"
   };
@@ -29,4 +29,4 @@ class Bottom extends Component {
   }
 }
 
-export default Bottom;
+export default Settings;

@@ -1,8 +1,8 @@
 import Aside from '../composants/Aside';
-import ContactForm from '../composants/ContactForm';
+import Settings from '../composants/Settings';
 import React from "react";
 
-function App() {
+function Reglages() {
   return (
     <div class="container">
     <div class = "row">
@@ -10,11 +10,11 @@ function App() {
         <Aside />
       </div>
       <div class="col-9">
-        <ContactForm />
+        <Settings />
       </div>
     </div>
     </div>
   );
 }
 
-export default App;
+export default Reglages;

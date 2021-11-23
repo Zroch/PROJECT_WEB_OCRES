@@ -1,5 +1,4 @@
 import '../styles/Main.css';
-import Bottom from "./Bottom";
 import React from "react";
 
 //Constantes
@@ -88,9 +87,7 @@ class Main extends React.Component {
                     </div>
                 </div>
 
-                <div class = "row">
-                    <Bottom />
-                </div>
+                
         
         </div>
     );

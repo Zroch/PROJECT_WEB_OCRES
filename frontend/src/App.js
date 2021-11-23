@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Notfound from './pages/Notfound';
 import Plusinfos from './pages/Plusinfos';
+import Reglages from './pages/Réglages';
 
 //Fonction principale qui gère toutes les pages
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route exact path ="/" element={<Home />}/>
         <Route exact path="contact" element={<Contact />}/>
         <Route exact path="plusinfo" element={<Plusinfos />}/>
+        <Route exact path="reglages" element={<Reglages />}/>
         <Route path="*" element={<Notfound />}/>
       </Routes>
   );
