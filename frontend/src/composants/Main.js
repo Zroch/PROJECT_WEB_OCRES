@@ -4,7 +4,7 @@ import React from "react";
 //Constantes
 const allinfo = [
     {
-        donnee : "donnee1",
+        donnee : "donnee1 test blabla",
         info : "plusinfo1",
     },
     {
