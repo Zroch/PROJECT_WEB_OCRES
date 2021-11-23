@@ -18,21 +18,24 @@ class Info1 extends React.Component {
             <button className="butts">
               <NavLink to="/info1" className="navlink"
                 activeClassName="nav-active">
-                Méteo
+                Méteo 
               </NavLink>
             </button >
+
             <button className="butts">
               <NavLink to="/info2" className="navlink"
                 activeClassName="nav-active">
                 Marée
               </NavLink>
             </button >
+
             <button className="butts">
               <NavLink to="/info3" className="navlink"
                 activeClassName="nav-active">
                 Vent
               </NavLink>
             </button >
+            
             <button className="butts">
               <NavLink to="/info4" className="navlink"
                 activeClassName="nav-active">
