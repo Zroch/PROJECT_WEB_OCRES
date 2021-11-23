@@ -1,10 +1,27 @@
 import '../styles/Main.css';
-import React from "react";
+import React, { Component } from "react";
+
+class Day extends Component {
+  render() {
+    const { data } = this.props;
+    console.log("data", data);
+    if (!data) return null;
+    const { temp } = data.main;
+    return (
+      <div className="day-container">
+        <strong>{temp} celsius</strong>
+        console.log(temp);
+      </div>
+    );
+  }
+}
 
 //Constantes
 const allinfo = [
     {
-        donnee : "donnee1 test blabla",
+      
+        donnee : <Day></Day>,
+     
         info : "plusinfo1",
     },
     {
