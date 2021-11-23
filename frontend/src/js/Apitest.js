@@ -4,7 +4,7 @@ import city from '../composants/Settings';
 //il faut maintenant pourvoir faire un fetch("https://goweather.herokuapp.com/weather/lenomdelaville")
 //Bon courage
 
-
+const API_URL = "https://goweather.herokuapp.com/weather"
 
 class Apitest extends React.Component {
     constructor(props) {
@@ -17,7 +17,8 @@ class Apitest extends React.Component {
     }
   
     componentDidMount() {
-      fetch("https://goweather.herokuapp.com/weather/Paris")
+      fetch(`${API_URL}/${city}`)
+      
         .then(res => res.json())
         .then(
           (result) => {
@@ -47,7 +48,7 @@ class Apitest extends React.Component {
       } else {
         return (
           <ul>
-           {items}
+           {items} Celcus
           </ul>
         );
       }
