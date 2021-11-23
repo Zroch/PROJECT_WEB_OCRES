@@ -1,9 +1,8 @@
-import '../styles/Home.css';
 import Aside from '../composants/Aside';
-import Info1 from '../composants/Info1';
 import React from 'react';
+import Info1 from '../composants/Info1';
 
-function Home () {
+function Information1 () {
 
  
 
@@ -21,4 +20,4 @@ function Home () {
   );
 }
 
-export default Home;
+export default Information1;

@@ -7,7 +7,10 @@ import Contact from './pages/Contact';
 import Notfound from './pages/Notfound';
 import Plusinfos from './pages/Plusinfos';
 import Reglages from './pages/Réglages';
-
+import Information1 from './pages/Information1';
+import Information2 from './pages/Information2';
+import Information3 from './pages/Information3';
+import Information4 from './pages/Information4';
 //Fonction principale qui gère toutes les pages
 function App() {
   return (
@@ -18,6 +21,10 @@ function App() {
         <Route exact path="contact" element={<Contact />}/>
         <Route exact path="plusinfo" element={<Plusinfos />}/>
         <Route exact path="reglages" element={<Reglages />}/>
+        <Route exact path="info1" element={<Information1 />}/>
+        <Route exact path="info2" element={<Information2 />}/>
+        <Route exact path="info3" element={<Information3 />}/>
+        <Route exact path="info4" element={<Information4 />}/>
         <Route path="*" element={<Notfound />}/>
       </Routes>
   );

@@ -19,8 +19,10 @@
 
 
 .butts{
+    padding: 50;
     width: 15%;
     height: 50%;
+    margin-right: 5%;
     background: #FFE6E0;
     border-radius: 20px;
     text-align: center;
@@ -37,4 +39,17 @@
     line-height: 28px;
     letter-spacing: 0.3px;
     color: #252733;  
+}
+
+.navlink{
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    color: #252733;  
+
 }
