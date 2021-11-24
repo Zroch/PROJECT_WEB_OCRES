@@ -1,25 +1,16 @@
 
 import "../styles/Settings.css";
 import React, { Component } from "react";
+import Apitest from "../js/Apitest";
 
-export const city = "Brest";
+
 
 class Settings extends Component {
-  
-  constructor(city){
     // Si la ville n'est pas définit alors la ville par défault est Paris
-    if(city === ""){
-      city = "BREST";
-    }
+    state = {
+      city: "Paris"
+    };
     
-  }
-
-  info(city) {
-    return city;
-  }
-  
- 
-  
   handleChange = event => {
     this.setState({ city: event.target.value });
   };
@@ -36,10 +27,14 @@ class Settings extends Component {
           value={city}
           onChange={this.handleChange}
         />
+
+        <Apitest city={city}/>
       </div>
       
     );
   }
 }
+
+
 
 export default Settings;

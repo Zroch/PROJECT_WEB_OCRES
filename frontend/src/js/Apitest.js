@@ -1,5 +1,5 @@
 import React from 'react';
-import { city }  from '../composants/Settings';
+
 
 const API_URL = "https://goweather.herokuapp.com/weather";
 
@@ -15,7 +15,7 @@ class Apitest extends React.Component {
     }
     
     componentDidMount() {
-      fetch(`${API_URL}/&${Settings.city}`)
+      fetch(`${API_URL}/&${city}`)
       
       
         .then(res => res.json())
@@ -48,7 +48,7 @@ class Apitest extends React.Component {
         return (
           <ul>
            <li>{items} Celcus blabla</li>
-           <li>La ville est : {info(city)}</li>
+           <li>La ville est : {city}</li>
           </ul>
           
         );
