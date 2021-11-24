@@ -7,7 +7,7 @@ class Settings extends Component {
     city: "Brest"
   };
 
-  handleClick = event => {
+  handleChange = event => {
     this.setState({ city: event.target.value });
   };
 
@@ -21,8 +21,8 @@ class Settings extends Component {
           type="text"
           name="Ville"
           value={city}
+          onChange={this.handleChange}
         />
-        <button onClick={this.handleClick}> cliquez pour actualiser</button>
       </div>
     );
   }

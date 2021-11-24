@@ -17,7 +17,7 @@ class Apitest extends React.Component {
     }
   
     componentDidMount() {
-      fetch(`${API_URL}/${city}`)
+      fetch(`${API_URL}/&${city}`)
       
         .then(res => res.json())
         .then(
