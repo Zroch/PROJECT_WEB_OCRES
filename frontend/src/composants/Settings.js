@@ -8,6 +8,12 @@ class Settings extends Component {
     city: "Paris"
   };
 
+  info(city) {
+    return city;
+  }
+  
+ 
+  
   handleChange = event => {
     this.setState({ city: event.target.value });
   };
@@ -27,6 +33,7 @@ class Settings extends Component {
 
         <Index city={city} />
       </div>
+      
     );
   }
 }
