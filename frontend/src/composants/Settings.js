@@ -1,12 +1,11 @@
 
 import "../styles/Settings.css";
 import React, { Component } from "react";
-
-export const city = "Brest";
+import Index from "../js/Index";
 
 class Settings extends Component {
   state = {
-    city: "Brest"
+    city: "Paris"
   };
 
   handleChange = event => {
@@ -16,8 +15,8 @@ class Settings extends Component {
   render() {
     const { city } = this.state;
     return (
-      <div className="bot">
-        <h2> Entrez votre zone</h2>
+      <div className="App">
+        <h2> Ma super station météo</h2>
 
         <input
           type="text"
@@ -25,6 +24,8 @@ class Settings extends Component {
           value={city}
           onChange={this.handleChange}
         />
+
+        <Index city={city} />
       </div>
     );
   }

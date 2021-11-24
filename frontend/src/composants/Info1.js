@@ -1,7 +1,6 @@
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import Apitest from '../js/Apitest';
 import Settings from './Settings';
 
 class Info1 extends React.Component {
@@ -49,7 +48,7 @@ class Info1 extends React.Component {
 
         <div class="row">
           <div className="mid">
-            <Apitest/>
+            <Settings/>
           </div>
         </div>
 
