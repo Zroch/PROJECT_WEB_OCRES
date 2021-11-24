@@ -49,6 +49,7 @@ class Info1 extends React.Component {
         <div class="row">
           <div className="mid">
             <Apitest />
+            api = new Apitest
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import city from '../composants/Settings';
+import Settings from '../composants/Settings';
 //on récupre dans settings le nom de la ville dans la donnée city
 //il faut maintenant pourvoir faire un fetch("https://goweather.herokuapp.com/weather/lenomdelaville")
 //Bon courage
@@ -15,9 +15,10 @@ class Apitest extends React.Component {
         items: []
       };
     }
-  
+    
     componentDidMount() {
-      fetch(`${API_URL}/&${city}`)
+      fetch(`${API_URL}/&${Settings.city}`)
+      
       
         .then(res => res.json())
         .then(
@@ -48,8 +49,10 @@ class Apitest extends React.Component {
       } else {
         return (
           <ul>
-           {items} Celcus
+           <li>{items} Celcus blabla</li>
+           <li>La ville est : {info(city)}</li>
           </ul>
+          
         );
       }
     }

@@ -3,10 +3,21 @@ import "../styles/Settings.css";
 import React, { Component } from "react";
 
 class Settings extends Component {
-  state = {
-    city: "Brest"
-  };
+  
+  constructor(city){
+    // Si la ville n'est pas définit alors la ville par défault est Paris
+    if(city === ""){
+      city = "BREST";
+    }
+    
+  }
 
+  info(city) {
+    return city;
+  }
+  
+ 
+  
   handleChange = event => {
     this.setState({ city: event.target.value });
   };
@@ -24,6 +35,7 @@ class Settings extends Component {
           onChange={this.handleChange}
         />
       </div>
+      
     );
   }
 }
