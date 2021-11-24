@@ -1,10 +1,8 @@
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
-
 import Settings from './Settings';
-import city  from '../composants/Settings';
-import Apitest from '../js/Apitest';
+
 
 class Info1 extends React.Component {
 
@@ -51,8 +49,7 @@ class Info1 extends React.Component {
 
         <div class="row">
           <div className="mid">
-            <Apitest city={city}> />
-   
+            <Settings/>
           </div>
         </div>
 

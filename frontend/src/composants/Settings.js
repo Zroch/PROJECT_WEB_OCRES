@@ -18,8 +18,8 @@ class Settings extends Component {
   render() {
     const { city } = this.state;
     return (
-      <div className="bot">
-        <h2> Entrez votre zone</h2>
+      <div className="App">
+        <h2> Ma super station météo</h2>
 
         <input
           type="text"
@@ -28,7 +28,7 @@ class Settings extends Component {
           onChange={this.handleChange}
         />
 
-        <Apitest city={city}/>
+        <Index city={city} />
       </div>
       
     );
