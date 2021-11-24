@@ -2,6 +2,8 @@
 import "../styles/Settings.css";
 import React, { Component } from "react";
 
+export const city = "Brest";
+
 class Settings extends Component {
   
   constructor(city){

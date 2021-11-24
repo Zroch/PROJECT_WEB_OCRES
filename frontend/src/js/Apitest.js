@@ -1,10 +1,8 @@
 import React from 'react';
-import Settings from '../composants/Settings';
-//on récupre dans settings le nom de la ville dans la donnée city
-//il faut maintenant pourvoir faire un fetch("https://goweather.herokuapp.com/weather/lenomdelaville")
-//Bon courage
+import { city }  from '../composants/Settings';
 
-const API_URL = "https://goweather.herokuapp.com/weather"
+const API_URL = "https://goweather.herokuapp.com/weather";
+
 
 class Apitest extends React.Component {
     constructor(props) {
