@@ -1,11 +1,8 @@
-import '../styles/Home.css';
 import Aside from '../composants/Aside';
-import Info1 from '../composants/Info1';
 import React from 'react';
+import Settings from '../composants/Settings';
 
 function Home () {
-
- 
 
   return (
     <div class="container">
@@ -14,7 +11,7 @@ function Home () {
         <Aside />
       </div>
       <div class="col-9">
-        <Info1 />
+        <Settings />
       </div>
     </div>
     </div>
