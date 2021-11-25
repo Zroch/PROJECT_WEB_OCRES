@@ -1,12 +1,8 @@
-import '../styles/Home.css';
 import Aside from '../composants/Aside';
-import Info1 from '../composants/Info1';
-import React from 'react';
+import Settings from '../composants/Settings';
+import React from "react";
 
-function Home () {
-
- 
-
+function Reglages() {
   return (
     <div class="container">
     <div class = "row">
@@ -14,11 +10,11 @@ function Home () {
         <Aside />
       </div>
       <div class="col-9">
-        <Info1 />
+        <Settings />
       </div>
     </div>
     </div>
   );
 }
 
-export default Home;
+export default Reglages;

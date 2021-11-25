@@ -3,20 +3,7 @@
     background: #FFFAF7;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
-    margin-top: 3%;
-    text-align: center;
-}
-.enter{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 0.3px;
-    text-decoration: none;
-    color: #252733;  
-}
-.input{
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -65,15 +52,4 @@
     text-decoration: none;
     color: #252733;  
 
-}
-
-.titre1{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 28px;
-    letter-spacing: 0.3px;
-    text-decoration: none;
-    color: #252733
 }

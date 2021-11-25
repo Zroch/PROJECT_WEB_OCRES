@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../styles/Container.css";
 
 class Day extends Component {
   render() {
@@ -11,7 +10,7 @@ class Day extends Component {
     const { temp } = data.main;
     const { icon, description } = data.weather[0];
     return (
-      <div>
+      <div className="day-container">
         <p>{dt_txt}</p>
         <img
           src={`http://openweathermap.org/img/w/${icon}.png`}

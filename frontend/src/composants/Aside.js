@@ -31,6 +31,13 @@ function Aside() {
           </NavLink>
         </li>
 
+        <li class = "row" >
+          <NavLink to="/reglages"  className="hover"
+          activeClassName="nav-active">
+            Réglages
+          </NavLink>
+        </li>
+
       </ul>
 
     </div>

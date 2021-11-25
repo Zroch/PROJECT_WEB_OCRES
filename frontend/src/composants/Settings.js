@@ -1,65 +1,51 @@
 
-import "../styles/Main.css";
+import "../styles/Settings.css";
 import React, { Component } from "react";
-import WheatherAPI from "../js/WeatherAPI";
-import WindAPI from "../js/WindAPI";
+import Index from "../js/Index";
+import config from '../config.js';
 
 
-<<<<<<< HEAD
+
 
 class Settings extends Component {
     // Si la ville n'est pas définit alors la ville par défault est Paris
     state = {
-      city: "Paris"
+      city: global.config.i18n.city
     };
     
-=======
-  info(city) {
-    return city;
-  }
-
->>>>>>> 78f8346471d49a3824eca34065ad80e9184b1d8e
-  handleChange = event => {
-    this.setState({ city: event.target.value });
-  };
-
-  render() {
-    const { city } = this.state;
-    return (
-      <div>
-        <h1 className="titre1">Overview</h1>
-        <div class="row" className="top">
-          <h2 className="enter"> Saisissez quelque chose</h2>
-          <div className="input">
-            <input className="input"
+    handleSubmitForm(event) {
+      alert("Full Name: " + this.state.global.config.i18n.city);
+      event.preventDefault();
+    }
+    handleChange(event) {
+      var value = event.target.value;
+      global.config.i18n.city = event.target.value;
+      this.setState({
+        fullName: value,
+      });
+    }
+    render() {
+      return (
+        <form onSubmit={event => this.handleSubmitForm(event)}>
+          <label>
+            Full Name:
+            <input
               type="text"
-              name="Ville"
-              value={city}
-              onChange={this.handleChange}
-            />
-          </div>
-          <div class="container" className="mid">
-            <div class="row">
-              <div class="col-4">
-                <WheatherAPI city={city} />
-              </div>
-              <div class="col-4">
-                <WindAPI city={city} />
-              </div>
-              <div class="col-4">
-                <WheatherAPI city={city} />
-              </div>
-            </div>
-            <div class="row">
+              value={global.config.i18n.city}
+              onChange={event => this.handleChange(event)}
               
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+            />
+          </label>
+          <input type="submit" value="Submit" />
+          <p>{this.state.fullName}</p>  
+         
+        </form>
+        
+      );
+    }
   }
-}
-
+export const city = true;
+console.log(city);
 
 
 export default Settings;

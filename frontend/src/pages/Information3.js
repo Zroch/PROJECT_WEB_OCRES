@@ -1,9 +1,8 @@
-import '../styles/Home.css';
 import Aside from '../composants/Aside';
-import Info1 from '../composants/Info1';
 import React from 'react';
+import Info3 from '../composants/Info3';
 
-function Home () {
+function Information3 () {
 
  
 
@@ -14,11 +13,11 @@ function Home () {
         <Aside />
       </div>
       <div class="col-9">
-        <Info1 />
+        <Info3 />
       </div>
     </div>
     </div>
   );
 }
 
-export default Home;
+export default Information3;
