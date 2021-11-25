@@ -1,7 +1,7 @@
 
 import "../styles/Settings.css";
 import React, { Component } from "react";
-import Apitest from "../js/Apitest";
+import Index from "../js/Index";
 
 
 
