@@ -26,9 +26,9 @@ class Settings extends Component {
     }
     render() {
       return (
-        <form onSubmit={event => this.handleSubmitForm(event)}>
+       <div className="Reglage">
           <label>
-            Full Name:
+            Entrer le nom de la ville :
             <input
               type="text"
               value={global.config.i18n.city}
@@ -36,10 +36,10 @@ class Settings extends Component {
               
             />
           </label>
-          <input type="submit" value="Submit" />
-          <p>{this.state.fullName}</p>  
+        
          
-        </form>
+         
+          </div>
         
       );
     }
