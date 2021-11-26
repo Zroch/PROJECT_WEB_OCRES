@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Settings from './Settings';
 import Index from '../js/Index';
 import config from '../config.js';
+import Forecast from '../js/Index';
 
 
 class Info1 extends React.Component {
@@ -51,8 +52,8 @@ class Info1 extends React.Component {
 
         <div class="row">
           <div className="mid">
-            <Index city={global.config.i18n.city}/>
-           
+            <Forecast city={global.config.i18n.city}/>
+            
           </div>
         </div>
 
