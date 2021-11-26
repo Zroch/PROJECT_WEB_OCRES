@@ -53,7 +53,6 @@ class Info1 extends React.Component {
         <div class="row">
           <div className="mid">
             <Forecast city={global.config.i18n.city}/>
-            
           </div>
         </div>
 
