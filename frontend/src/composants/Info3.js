@@ -24,9 +24,9 @@ class Info3 extends React.Component {
             </button >
 
             <button className="butts">
-              <NavLink to="/maree" className="navlink"
+              <NavLink to="/visibilite" className="navlink"
                 activeClassName="nav-active">
-                Marée
+                Visibilité
               </NavLink>
             </button >
 
@@ -45,7 +45,37 @@ class Info3 extends React.Component {
             </button >
           </div>
         </div>
+        <div class="row" >
+          <div class="col" className="top">
+            <button className="butts">
+              <NavLink to="/" className="navlink"
+                activeClassName="nav-active">
+                1 
+              </NavLink>
+            </button >
 
+            <button className="butts">
+              <NavLink to="/visibilite" className="navlink"
+                activeClassName="nav-active">
+                2
+              </NavLink>
+            </button >
+
+            <button className="butts">
+              <NavLink to="/vent" className="navlink"
+                activeClassName="nav-active">
+                3
+              </NavLink>
+            </button >
+            
+            <button className="butts">
+              <NavLink to="/courant" className="navlink"
+                activeClassName="nav-active">
+                4
+              </NavLink>
+            </button >
+          </div>
+        </div>
 
         <div class="row">
           <div className="mid">
