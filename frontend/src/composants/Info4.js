@@ -78,7 +78,9 @@ class Info4 extends React.Component {
         <div class="row">
           <div className="mid">
             <article>
-              Info4
+            
+            <tidesAPI/>
+            
             </article>
           </div>
         </div>
