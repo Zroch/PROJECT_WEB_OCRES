@@ -62,6 +62,7 @@ class Forecast extends Component {
           <Day data={forecast[2]}/>
           <Day data={forecast[3]}/>
           <Day data={forecast[4]}/> */}
+          
         </div>
       </div>
     );
