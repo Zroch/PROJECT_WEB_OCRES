@@ -23,7 +23,7 @@ function App() {
         <Route exact path="plusinfo" element={<Plusinfos />}/>
         <Route exact path="reglages" element={<Reglages />}/>
         <Route exact path="meteo" element={<Information1 />}/>
-        <Route exact path="maree" element={<Information2 />}/>
+        <Route exact path="visibilite" element={<Information2 />}/>
         <Route exact path="vent" element={<Information3 />}/>
         <Route exact path="courant" element={<Information4 />}/>
         <Route path="*" element={<Notfound />}/>
