@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Day from "../composants/Day";
+import Wind from "../composants/Wind";
 import '../styles/Apis.css';
 
 
 const API_URL = "http://api.openweathermap.org/data/2.5/forecast";
 const API_KEY = "768a35a09a1701be84498950a95e7cf5";
 
-class Forecast extends Component {
+class WindAPI extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      forecast: null,
+      forecast: null
     };
   }
 
@@ -55,7 +55,7 @@ class Forecast extends Component {
         <div>
           {/* render tout le tableau */}
           {forecast.map((forecastData, index) => {
-            return <Day key={index} data={forecastData} />;
+            return <Wind key={index} data={forecastData} />;
           })}
           {/* <Day data={forecast[0]}/>
           <Day data={forecast[1]}/>
@@ -68,4 +68,4 @@ class Forecast extends Component {
   }
 }
 
-export default Forecast;
+export default WindAPI;

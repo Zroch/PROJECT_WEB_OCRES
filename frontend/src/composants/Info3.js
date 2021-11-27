@@ -1,6 +1,7 @@
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import WindAPI from "../js/WindAPI";
 
 class Info3 extends React.Component {
 
@@ -45,7 +46,7 @@ class Info3 extends React.Component {
         <div class="row">
           <div className="mid">
             <article>
-              Info3
+            <WindAPI city={global.config.i18n.city}/>
             </article>
           </div>
         </div>

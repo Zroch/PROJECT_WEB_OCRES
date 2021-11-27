@@ -4,21 +4,19 @@ import '../styles/Apis.css';
 class Day extends Component {
   render() {
     const { data } = this.props;
-    console.log("data", data);
+   // console.log("data", data);
     if (!data) return null;
 
     const { dt_txt } = data;
-    const { temp } = data.main;
-    const { icon, description } = data.weather[0];
+    const { deg } = data.wind;
+    const {speed} = data.wind;
+    const {gust} = data.wind;
     return (
       <div className="margtop">
         <h4>{dt_txt}</h4>
-        <img
-          src={`http://openweathermap.org/img/w/${icon}.png`}
-          alt="weather"
-        />
-        <h5>{description}</h5>
-        <h3>{temp} celsius</h3>
+        <h5>La vitesse du vent est de {speed} km/h</h5>
+        <h5>Avec des rafales atteignants {gust} km/h</h5>
+        <h5>Avec pour direction : {deg} degrès</h5>
       </div>
     );
   }

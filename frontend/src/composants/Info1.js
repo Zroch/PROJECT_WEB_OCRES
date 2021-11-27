@@ -1,9 +1,6 @@
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import Settings from './Settings';
-import Index from '../js/Index';
-import config from '../config.js';
 import Forecast from '../js/Index';
 
 

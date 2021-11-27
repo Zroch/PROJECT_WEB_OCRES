@@ -1,8 +1,7 @@
 
 import "../styles/Settings.css";
 import React, { Component } from "react";
-import Index from "../js/Index";
-import config from '../config.js';
+
 
 
 
