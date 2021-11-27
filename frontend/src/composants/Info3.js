@@ -1,6 +1,7 @@
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import WindAPI from "../js/WindAPI";
 
 class Info3 extends React.Component {
 
@@ -16,25 +17,28 @@ class Info3 extends React.Component {
         <div class="row" >
           <div class="col" className="top">
             <button className="butts">
-              <NavLink to="/info1" className="navlink"
+              <NavLink to="/" className="navlink"
                 activeClassName="nav-active">
-                Méteo
+                Méteo 
               </NavLink>
             </button >
+
             <button className="butts">
-              <NavLink to="/info2" className="navlink"
+              <NavLink to="/maree" className="navlink"
                 activeClassName="nav-active">
                 Marée
               </NavLink>
             </button >
+
             <button className="butts">
-              <NavLink to="/info3" className="navlink"
+              <NavLink to="/vent" className="navlink"
                 activeClassName="nav-active">
                 Vent
               </NavLink>
             </button >
+            
             <button className="butts">
-              <NavLink to="/info4" className="navlink"
+              <NavLink to="/courant" className="navlink"
                 activeClassName="nav-active">
                 Courants
               </NavLink>
@@ -42,10 +46,11 @@ class Info3 extends React.Component {
           </div>
         </div>
 
+
         <div class="row">
           <div className="mid">
             <article>
-              Info3
+            <WindAPI city={global.config.i18n.city}/>
             </article>
           </div>
         </div>

@@ -1,9 +1,6 @@
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import Settings from './Settings';
-import Index from '../js/Index';
-import config from '../config.js';
 import Forecast from '../js/Index';
 
 
@@ -20,28 +17,28 @@ class Info1 extends React.Component {
         <div class="row" >
           <div class="col" className="top">
             <button className="butts">
-              <NavLink to="/info1" className="navlink"
+              <NavLink to="/" className="navlink"
                 activeClassName="nav-active">
                 Méteo 
               </NavLink>
             </button >
 
             <button className="butts">
-              <NavLink to="/info2" className="navlink"
+              <NavLink to="/maree" className="navlink"
                 activeClassName="nav-active">
                 Marée
               </NavLink>
             </button >
 
             <button className="butts">
-              <NavLink to="/info3" className="navlink"
+              <NavLink to="/vent" className="navlink"
                 activeClassName="nav-active">
                 Vent
               </NavLink>
             </button >
             
             <button className="butts">
-              <NavLink to="/info4" className="navlink"
+              <NavLink to="/courant" className="navlink"
                 activeClassName="nav-active">
                 Courants
               </NavLink>
