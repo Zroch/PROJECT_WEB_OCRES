@@ -22,10 +22,10 @@ function App() {
         <Route exact path="contact" element={<Contact />}/>
         <Route exact path="plusinfo" element={<Plusinfos />}/>
         <Route exact path="reglages" element={<Reglages />}/>
-        <Route exact path="info1" element={<Information1 />}/>
-        <Route exact path="info2" element={<Information2 />}/>
-        <Route exact path="info3" element={<Information3 />}/>
-        <Route exact path="info4" element={<Information4 />}/>
+        <Route exact path="meteo" element={<Information1 />}/>
+        <Route exact path="maree" element={<Information2 />}/>
+        <Route exact path="vent" element={<Information3 />}/>
+        <Route exact path="courant" element={<Information4 />}/>
         <Route path="*" element={<Notfound />}/>
       </Routes>
   );
