@@ -48,7 +48,7 @@ class Info2 extends React.Component {
         <div class="row">
           <div className="mid">
             <article>
-              Info2
+            <tidesAPI/>
             </article>
           </div>
         </div>

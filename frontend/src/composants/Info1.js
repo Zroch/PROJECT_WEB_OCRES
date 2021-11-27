@@ -61,3 +61,4 @@ class Info1 extends React.Component {
 }
 
 export default Info1;
+
