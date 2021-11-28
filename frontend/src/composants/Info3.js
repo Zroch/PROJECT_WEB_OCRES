@@ -48,9 +48,9 @@ class Info3 extends React.Component {
         <div class="row" >
           <div class="col" className="top">
             <button className="butts">
-              <NavLink to="/" className="navlink"
+              <NavLink to="/astronomie" className="navlink"
                 activeClassName="nav-active">
-                1 
+                Astronomie
               </NavLink>
             </button >
 

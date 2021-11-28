@@ -11,6 +11,7 @@ import Information1 from './pages/Information1';
 import Information2 from './pages/Information2';
 import Information3 from './pages/Information3';
 import Information4 from './pages/Information4';
+import Information5 from './pages/Information5';
 
 //Fonction principale qui gère toutes les pages
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="visibilite" element={<Information2 />}/>
         <Route exact path="vent" element={<Information3 />}/>
         <Route exact path="maree" element={<Information4 />}/>
+        <Route exact path="astronomie" element={<Information5 />}/>
         <Route path="*" element={<Notfound />}/>
       </Routes>
   );

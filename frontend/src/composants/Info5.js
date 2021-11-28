@@ -1,9 +1,9 @@
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import VisiblityAPI from '../js/VisibilityAPI';
+import AstronomieAPI from '../js/AstronomieAPI';
 
-class Info2 extends React.Component {
+class Info4 extends React.Component {
 
   render() {
     return (
@@ -12,6 +12,7 @@ class Info2 extends React.Component {
         <div class="row">
           <h1 className="font">Overview</h1>
         </div>
+
         <div class="row" >
           <div class="col" className="top">
             <button className="butts">
@@ -75,12 +76,13 @@ class Info2 extends React.Component {
           </div>
         </div>
 
-
         <div class="row">
           <div className="mid">
-          
-            <VisiblityAPI city={global.config.i18n.city}/>
-          
+            <article>
+            
+            <AstronomieAPI city1={global.config.i18n.city}/>
+            
+            </article>
           </div>
         </div>
 
@@ -91,4 +93,4 @@ class Info2 extends React.Component {
   }
 }
 
-export default Info2;
+export default Info4;
