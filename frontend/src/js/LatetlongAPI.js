@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Latetlong from "../../components/Latetlong";
-
+import Latetlong from "../composants/Latetlong";
+import "../styles/Apis.css"
 
 const API_URL = "http://api.openweathermap.org/data/2.5/forecast";
 const API_KEY = "768a35a09a1701be84498950a95e7cf5";
@@ -49,12 +49,10 @@ class LatetlongAPI extends Component {
     const { city1 } = this.props;
     if (!city) return <p>Loading...</p>;
     return (
-      <div>
+      <div className="center">
         
         <h2>{city1}</h2>
        
-          
-          yo
           <Latetlong data={city}/>
      
           

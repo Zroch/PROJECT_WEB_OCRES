@@ -1,7 +1,7 @@
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import LatetlongAPI from '../js/TidesAPI';
+import LatetlongAPI from '../js/LatetlongAPI';
 
 class Info4 extends React.Component {
 
@@ -37,7 +37,7 @@ class Info4 extends React.Component {
             </button >
             
             <button className="butts">
-              <NavLink to="/courant" className="navlink"
+              <NavLink to="/maree" className="navlink"
                 activeClassName="nav-active">
                 Marée
               </NavLink>

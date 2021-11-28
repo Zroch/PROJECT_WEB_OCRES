@@ -38,9 +38,9 @@ class Info1 extends React.Component {
             </button >
             
             <button className="butts">
-              <NavLink to="/courant" className="navlink"
+              <NavLink to="/maree" className="navlink"
                 activeClassName="nav-active">
-                Courants
+                Marée
               </NavLink>
             </button >
           </div>
