@@ -1,72 +1,61 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Day from "../composants/Day";
-import '../styles/Apis.css';
+//import Tides from "../../components/Tides";
 
+//http://api.worldweatheronline.com/premium/v1/marine.ashx?key=042cf1d1dadc48ecabb163106212711&format=json&q=45%2C-2&tide=yes
+const API_URL = "http://api.worldweatheronline.com/premium/v1/marine.ashx";
+const API_KEY = "042cf1d1dadc48ecabb163106212711";
 
-const API_URL = "http://api.openweathermap.org/data/2.5/forecast";
-const API_KEY = "768a35a09a1701be84498950a95e7cf5";
-
-class Forecast extends Component {
+class TidesAPI extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      forecast: null,
+      items: null
     };
   }
 
-  callAPI = city => {
+  callAPI = (lat,lon) => {
     // Call API
     axios
-      .get(`http://api.worldweatheronline.com/premium/v1/marine.ashx?key=042cf1d1dadc48ecabb163106212711&format=xml&q=45,-2&tide=yes`)
+      .get(`${API_URL}?key=${API_KEY}&format=json&q=${lat},${lon}&tide=yes`)
       .then(({ data }) => {
-        console.log(data);
+       console.log(data)
         // Recupere uniquement la propriété data
-        const { list } = data;
+       
         // On prend les trois premières heures de chaque jour (donc de 0-3h))
-        const forecast = [list[0], list[9]];
+       
 
-        this.setState({ forecast });
+        this.setState({ items: data.data.weather[0].tides[0].tide_data[0].tideHeight_mt, });
       })
       .catch(console.error);
   };
 
   // Lance un appel au lancement du component
   componentDidMount() {
-    const { city } = this.props;
-    this.callAPI(city);
+    const { lat, lon } = this.props;
+    this.callAPI(lat,lon);
   }
 
   // A chaque update relance une api
   componentDidUpdate(nextProps) {
     // Ici on verifie que la mise à jour concerne bien le champs city
-    if (nextProps.city !== this.props.city) {
-      this.callAPI(nextProps.city);
+    if (nextProps.lat || nextProps.lon !== this.props.lat || this.props.lon) {
+      this.callAPI(nextProps.lat, nextProps.lon);
     }
   }
 
   render() {
-    const { forecast } = this.state;
-    const { city } = this.props;
-    if (!forecast) return <p>Loading...</p>;
+    const { items } = this.state;
+    console.log(items)
+    if (!items) return <p>Loading...</p>;
     return (
-      <div className="center">
-        <h2>{city}</h2>
-        <div>
-          {/* render tout le tableau */}
-          {forecast.map((forecastData, index) => {
-            return <Tides key={index} data={forecastData} />;
-          })}
-          {/* <Day data={forecast[0]}/>
-          <Day data={forecast[1]}/>
-          <Day data={forecast[2]}/>
-          <Day data={forecast[3]}/>
-          <Day data={forecast[4]}/> */}
-          
+      <div>
+         {items}
         </div>
-      </div>
+      
     );
   }
 }
 
-export default Forecast;
+
+export default TidesAPI;

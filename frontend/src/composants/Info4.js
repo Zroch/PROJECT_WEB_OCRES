@@ -1,6 +1,7 @@
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import LatetlongAPI from '../js/TidesAPI';
 
 class Info4 extends React.Component {
 
@@ -38,7 +39,7 @@ class Info4 extends React.Component {
             <button className="butts">
               <NavLink to="/courant" className="navlink"
                 activeClassName="nav-active">
-                Courants
+                Marée
               </NavLink>
             </button >
           </div>
@@ -79,7 +80,7 @@ class Info4 extends React.Component {
           <div className="mid">
             <article>
             
-            <tidesAPI/>
+            <LatetlongAPI city1={global.config.i18n.city}/>
             
             </article>
           </div>

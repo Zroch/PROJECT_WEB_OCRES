@@ -57,11 +57,7 @@ class WindAPI extends Component {
           {forecast.map((forecastData, index) => {
             return <Wind key={index} data={forecastData} />;
           })}
-          {/* <Day data={forecast[0]}/>
-          <Day data={forecast[1]}/>
-          <Day data={forecast[2]}/>
-          <Day data={forecast[3]}/>
-          <Day data={forecast[4]}/> */}
+          
         </div>
       </div>
     );
