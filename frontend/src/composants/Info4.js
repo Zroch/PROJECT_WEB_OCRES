@@ -79,7 +79,7 @@ class Info4 extends React.Component {
           <div className="mid">
             <article>
             
-            <tidesAPI/>
+              <tidesAPI/>
             
             </article>
           </div>
