@@ -17,12 +17,12 @@ function Aside() {
           </NavLink>
         </li>
 
-        <li class="row">
+        {/*<li class="row">
           <NavLink to="/contact"  className="hover" 
           activeClassName="nav-active">
             Contact
           </NavLink>
-        </li>
+  </li>*/}
 
         <li class = "row" >
           <NavLink to="/plusinfo"  className="hover" 

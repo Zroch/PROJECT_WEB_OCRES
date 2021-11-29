@@ -27,7 +27,7 @@ class TidesAPI extends Component {
         // On prend les trois premières heures de chaque jour (donc de 0-3h))
        
 
-        this.setState({ items1: data.data.weather[0].tides[0].tide_data[0].tideHeight_mt, date1 : data.data.weather[0].tides[0].tide_data[0].tideDateTime, items2: data.data.weather[0].tides[0].tide_data[1].tideHeight_mt, date2 : data.data.weather[0].tides[0].tide_data[1].tideDateTime, items3: data.data.weather[0].tides[0].tide_data[2].tideHeight_mt, date3 : data.data.weather[0].tides[0].tide_data[2].tideDateTime, items4: data.data.weather[0].tides[0].tide_data[3].tideHeight_mt, date4 : data.data.weather[0].tides[0].tide_data[3].tideDateTime });
+        this.setState({ leve: data.data.weather[0].astronomy[0].sunrise, couche: data.data.weather[0].astronomy[0].sunset});
       })
       .catch(console.error);
   };
@@ -47,15 +47,12 @@ class TidesAPI extends Component {
   }
 
   render() {
-    const { items1, date1, items2, date2, items3, date3, items4, date4 } = this.state;
-    console.log(items1)
-    if (!items1) return <p>Loading...</p>;
+    const { leve, couche } = this.state;
+    console.log(leve)
+    if (!leve) return <p>Loading...</p>;
     return (
-      <div className="extension">
-         <h4>A {date1}, la hauteur de la marée est de : </h4><h1>{items1} mètres</h1>
-         <h4>A {date2}, la hauteur de la marée est de : </h4><h1>{items2} mètres</h1>
-         <h4>A {date3}, la hauteur de la marée est de : </h4><h1>{items3} mètres</h1>
-         <h4>A {date4}, la hauteur de la marée est de : </h4><h1>{items4} mètres</h1>
+      <div className="margtop">
+         <h4>Le soleil se lève à </h4>{leve}<h4>et se couche a </h4>{couche}
         </div>
       
     );

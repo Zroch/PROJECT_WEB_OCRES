@@ -9,9 +9,10 @@ class Info2 extends React.Component {
     return (
       <div class="container">
 
-        <div class="row">
+<div class="row">
           <h1 className="font">Overview</h1>
         </div>
+
         <div class="row" >
           <div class="col" className="top">
             <button className="butts">
@@ -24,7 +25,7 @@ class Info2 extends React.Component {
             <button className="butts">
               <NavLink to="/visibilite" className="navlink"
                 activeClassName="nav-active">
-                Visibilité
+                Visiblité
               </NavLink>
             </button >
 
@@ -34,42 +35,29 @@ class Info2 extends React.Component {
                 Vent
               </NavLink>
             </button >
-            
-            <button className="butts">
-              <NavLink to="/courant" className="navlink"
-                activeClassName="nav-active">
-                Courants
-              </NavLink>
-            </button >
           </div>
         </div>
+
         <div class="row" >
           <div class="col" className="top">
-            <button className="butts">
-              <NavLink to="/" className="navlink"
+          <button className="butts">
+              <NavLink to="/maree" className="navlink"
                 activeClassName="nav-active">
-                1 
+                Marée
+              </NavLink>
+            </button >
+
+            <button className="butts">
+              <NavLink to="/astronomie" className="navlink"
+                activeClassName="nav-active">
+                Astronomie
               </NavLink>
             </button >
 
             <button className="butts">
               <NavLink to="/visibilite" className="navlink"
                 activeClassName="nav-active">
-                2
-              </NavLink>
-            </button >
-
-            <button className="butts">
-              <NavLink to="/vent" className="navlink"
-                activeClassName="nav-active">
-                3
-              </NavLink>
-            </button >
-            
-            <button className="butts">
-              <NavLink to="/courant" className="navlink"
-                activeClassName="nav-active">
-                4
+                Back
               </NavLink>
             </button >
           </div>

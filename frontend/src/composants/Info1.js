@@ -36,43 +36,29 @@ class Info1 extends React.Component {
                 Vent
               </NavLink>
             </button >
-            
-            <button className="butts">
-              <NavLink to="/courant" className="navlink"
-                activeClassName="nav-active">
-                Courants
-              </NavLink>
-            </button >
           </div>
         </div>
 
         <div class="row" >
           <div class="col" className="top">
-            <button className="butts">
-              <NavLink to="/" className="navlink"
+          <button className="butts">
+              <NavLink to="/maree" className="navlink"
                 activeClassName="nav-active">
-                1 
+                Marée
+              </NavLink>
+            </button >
+
+            <button className="butts">
+              <NavLink to="/astronomie" className="navlink"
+                activeClassName="nav-active">
+                Astronomie
               </NavLink>
             </button >
 
             <button className="butts">
               <NavLink to="/visibilite" className="navlink"
                 activeClassName="nav-active">
-                2
-              </NavLink>
-            </button >
-
-            <button className="butts">
-              <NavLink to="/vent" className="navlink"
-                activeClassName="nav-active">
-                3
-              </NavLink>
-            </button >
-            
-            <button className="butts">
-              <NavLink to="/courant" className="navlink"
-                activeClassName="nav-active">
-                4
+                Back
               </NavLink>
             </button >
           </div>
