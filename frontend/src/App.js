@@ -3,7 +3,6 @@ import React from 'react';
 import './styles/App.css';
 import {Routes,  Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Contact from './pages/Contact';
 import Notfound from './pages/Notfound';
 import Plusinfos from './pages/Plusinfos';
 import Reglages from './pages/Réglages';

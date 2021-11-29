@@ -1,13 +1,19 @@
+//Les imports
 import React, { Component } from "react";
 import axios from "axios";
 import Wind from "../composants/Wind";
 import '../styles/Apis.css';
 
+//API récupérant les informations sur la force du vent dans une ville
+//On récupère la force du vent, sa direction et la force de ses rafales 
 
+//Les constantes contenants l'url de l'api et la key
+//API d'information sur la météo 
 const API_URL = "http://api.openweathermap.org/data/2.5/forecast";
 const API_KEY = "768a35a09a1701be84498950a95e7cf5";
 
 class WindAPI extends Component {
+  //On initialise les variables
   constructor(props) {
     super(props);
     this.state = {
@@ -15,11 +21,14 @@ class WindAPI extends Component {
     };
   }
 
+  //On créer la fonction CallAPI récupérant les données d'une API et pouvant être réutilisée à tout moment
+  //La fonction est appelée avec un paramètre city
   callAPI = city => {
-    // Call API
     axios
+      //On fait une demande à l'url saisie
       .get(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`)
       .then(({ data }) => {
+        //Les données sous le format json sont récupérées dans data
         console.log(data);
         // Recupere uniquement la propriété data
         const { list } = data;
@@ -46,10 +55,13 @@ class WindAPI extends Component {
   }
 
   render() {
+    //On appelle les données récupérées
     const { forecast } = this.state;
     const { city } = this.props;
+    //Affiche que les données chargent
     if (!forecast) return <p>Loading...</p>;
     return (
+      //On appelle le composant Wind avec pour paramètre les données récupérées par l'API
       <div className="center">
         <h2>{city}</h2>
         <div>
@@ -57,7 +69,7 @@ class WindAPI extends Component {
           {forecast.map((forecastData, index) => {
             return <Wind key={index} data={forecastData} />;
           })}
-          
+
         </div>
       </div>
     );
