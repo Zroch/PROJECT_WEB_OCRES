@@ -1,3 +1,6 @@
+/*Style pour le composant main*/
+
+/*haut de la page*/
 .top{
     height: 140px;
     background: #FFFAF7;
@@ -7,6 +10,7 @@
     text-align: center;
 }
 
+/*Container du milieu de la page*/
 .mid{
     height: 100%;
     background: #FFFAF7;    
@@ -17,7 +21,7 @@
     margin-top: 5%;
 }
 
-
+/*Style des boutons*/
 .butts{
     padding: 50;
     width: 15%;
@@ -31,6 +35,7 @@
     margin-top: 4%;
 }
 
+/*Style du text*/
 .font{
     font-family: Roboto;
     font-style: normal;
@@ -41,6 +46,7 @@
     color: #252733;  
 }
 
+/*Style des Navlinks*/
 .navlink{
 
     font-family: Roboto;

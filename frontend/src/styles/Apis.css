@@ -1,17 +1,12 @@
+/*Styles pour les composants appelés dans les api*/
+
+/*Centrer le text du contenu*/
 .center{
     text-align: center;
 }
 
+/*Mettre un espace entre le haut du container et le text*/
 .margtop{
     margin-top: 5%;
 }
 
-.extension{
-    height: 50%;
-    background: #FFE6E0;    
-    border: 1px solid #DFE0EB;
-    box-sizing: border-box;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    margin-top: 5%;
-}
