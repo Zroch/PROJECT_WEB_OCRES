@@ -1,4 +1,4 @@
-//Formulaire de contact non fonctionel 
+//les imports
 import React from 'react';
 import Aside from '../composants/Aside';
 import '../styles/Main.css';
@@ -28,7 +28,7 @@ function PlusInfo() {
             <li>La météo</li>
             <li>La visibilité</li>
             <li>Le vent</li>
-            <li>la marée</li>
+            <li>La marée</li>
             <li>L'astronomie</li>
             <li>Les informations sur le port le plus proche</li>
           </div>
