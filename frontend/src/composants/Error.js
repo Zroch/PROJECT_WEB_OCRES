@@ -1,4 +1,4 @@
-//Affiche le message d'erreur de façon animée
+//Affiche le message d'erreur
 
 //Formulaire de contact non fonctionel 
 import React from "react";
@@ -6,7 +6,7 @@ import React from "react";
 function Error() {
     return (
       <div>
-          erreur
+          erreur page not found
       </div>
     );
   }

@@ -1,10 +1,13 @@
+//Les imports
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
 import WindAPI from "../js/WindAPI";
 
-class Info3 extends React.Component {
+//Ce compostant permet dafficher les boutons et l'information numéro 3 qui est la force du vent 
 
+class Info3 extends React.Component {
+//Les boutons sont affichés à l'aide de Navlink
   render() {
     return (
       <div class="container">
@@ -69,10 +72,8 @@ class Info3 extends React.Component {
             </article>
           </div>
         </div>
-
-
-
       </div>
+      //L'API WindAPI récupérant les informations concernant le vent est appelée 
     );
   }
 }

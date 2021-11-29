@@ -1,9 +1,13 @@
+//Les imports
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
 import AstronomieAPI from '../js/AstronomieAPI';
 
+//Ce compostant permet dafficher les boutons et l'information numéro 5 qui est l'astronomie 
+
 class Info4 extends React.Component {
+//Les boutons sont affichés à l'aide de Navlink
 
   render() {
     return (
@@ -72,10 +76,9 @@ class Info4 extends React.Component {
             </article>
           </div>
         </div>
-
-
-
       </div>
+      //L'API AstronomieAPI est appelée afin d'afficher les horaires de levé et de couché du soleil
+
     );
   }
 }

@@ -20,7 +20,6 @@ function App() {
     //Lorsque l'url saisie est invalide la page renvoie sur la page Notfound
       <Routes>
         <Route exact path ="/" element={<Home />}/>
-        <Route exact path="contact" element={<Contact />}/>
         <Route exact path="plusinfo" element={<Plusinfos />}/>
         <Route exact path="reglages" element={<Reglages />}/>
         <Route exact path="meteo" element={<Information1 />}/>

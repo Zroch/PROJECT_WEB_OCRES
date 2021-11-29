@@ -1,13 +1,15 @@
+//Les imports
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
 import Forecast from '../js/Index';
 
-
+//Ce compostant permet dafficher les boutons et l'information numéro 1 qui est la météo 
 class Info1 extends React.Component {
 
   render() {
     return (
+      //Les boutons sont affichés à l'aide de Navlink
       <div class="container">
 
         <div class="row">
@@ -19,7 +21,7 @@ class Info1 extends React.Component {
             <button className="butts">
               <NavLink to="/" className="navlink"
                 activeClassName="nav-active">
-                Méteo 
+                Méteo
               </NavLink>
             </button >
 
@@ -41,7 +43,7 @@ class Info1 extends React.Component {
 
         <div class="row" >
           <div class="col" className="top">
-          <button className="butts">
+            <button className="butts">
               <NavLink to="/maree" className="navlink"
                 activeClassName="nav-active">
                 Marée
@@ -68,13 +70,14 @@ class Info1 extends React.Component {
 
         <div class="row">
           <div className="mid">
-            <Forecast city={global.config.i18n.city}/>
+            <Forecast city={global.config.i18n.city} />
           </div>
         </div>
 
 
 
       </div>
+      //L'api Forecast affichant la météo est appelée
     );
   }
 }
