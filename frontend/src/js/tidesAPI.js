@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "../styles/Apis.css";
-import Chart from "../composants/Chart";
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from "recharts";
 //API récupérant les informations de la marèe d'une ville
 //On récupère la hauteur de la marée à une heure relevée par l'API 
 
@@ -56,13 +56,22 @@ class TidesAPI extends Component {
   render() {
     //On appelle les données récupérées
     const { items1, date1, items2, date2, items3, date3 } = this.state;
-    console.log(items1)
+    const datas = [{ name:  date1 , height: items1 }, { name:  date2 , height: items2 }, { name:  date3 , height:  items3 }];
+    const renderLineChart = (
+      <LineChart width={600} height={300} data={datas} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+        <Line type="monotone" dataKey="height" stroke="#8884d8" />
+        <CartesianGrid stroke="#ccc" strokeDasharray="1 1" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+      </LineChart>)
+    //console.log(items1)
     //Affiche que les données chargent
     if (!items1) return <p>Loading...</p>;
     return (
       //Affichage des données
-      <div>
-        <Chart date1={date1} items1={items1} date2={date2}  items2={items2} date3={date3}  items3={items3} />
+      <div className="center">
+        {renderLineChart}
         <h4>A {date1}, la hauteur de la marée est de : </h4><h1>{items1} mètres</h1>
         <h4>A {date2}, la hauteur de la marée est de : </h4><h1>{items2} mètres</h1>
         <h4>A {date3}, la hauteur de la marée est de : </h4><h1>{items3} mètres</h1>
