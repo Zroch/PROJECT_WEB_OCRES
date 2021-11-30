@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "../styles/Apis.css";
-
+import Chart from "../composants/Chart";
 //API récupérant les informations de la marèe d'une ville
 //On récupère la hauteur de la marée à une heure relevée par l'API 
 
@@ -16,8 +16,8 @@ class TidesAPI extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: null,
-      date: null
+      items1:null,items2:null,items3: null,
+      date1: null,date2:null,date3: null
     };
   }
 
@@ -62,6 +62,7 @@ class TidesAPI extends Component {
     return (
       //Affichage des données
       <div>
+        <Chart date1={date1} items1={items1} date2={date2}  items2={items2} date3={date3}  items3={items3} />
         <h4>A {date1}, la hauteur de la marée est de : </h4><h1>{items1} mètres</h1>
         <h4>A {date2}, la hauteur de la marée est de : </h4><h1>{items2} mètres</h1>
         <h4>A {date3}, la hauteur de la marée est de : </h4><h1>{items3} mètres</h1>
