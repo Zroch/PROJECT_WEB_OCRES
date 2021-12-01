@@ -9,7 +9,7 @@ router.post('/', PortCtrl.createPort);
 router.get('/:id', PortCtrl.getOnePort);
 router.get('/', PortCtrl.getAllPorts);
 router.put('/:id', PortCtrl.updateOnePort);
-router.delete('/', PortCtrl.deleteOnePort);
+router.delete('/:id', PortCtrl.deleteOnePort);
 
 
 module.exports = router;
