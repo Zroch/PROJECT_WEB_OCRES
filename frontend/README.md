@@ -11,6 +11,21 @@
         L'astronomie
         Les informations sur le port le plus proche
 
-    Auteurs :
+Concernant la planification des taches nous avons utilisés un calendrier classique, avec différents objectifs majeurs.
+
+- Mise en place du design général du site / Lucas.
+- Responsive / Lucas.
+- Intégration de la première API / Lucas.
+- Mise en place d'une variable globale / Alexis.
+- Recherche d'api / Alexis & Lucas.
+- Intégration des API / Lucas.
+- Graphique / Lucas & Alexis.
+- Mise en place du backend / Alexis.
+- Routes, Models, Controllers / Alexis.
+- Intégration du backend au frontend / Lucas & Alexis.
+
+Auteurs :
         Lucas LESCOT & Alexis YOUF
+    
+
      
