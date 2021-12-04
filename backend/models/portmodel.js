@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
 //mongodb génère automatiquement l'ID
+//ici on génère un modèle pour stocker correctement les ports dans la base de données.
 const capitainerie = mongoose.Schema({
     city: {
-        type: String,
-        required: true
+        type: String, //type
+        required: true //obligatoire
     },
     name: {
         type : String,
@@ -16,7 +17,7 @@ const capitainerie = mongoose.Schema({
     },
     horaire: {
         type: String,
-        required: false
+        required: false //non obligatoire.
     },
     price: {
         type: Number,
@@ -24,4 +25,4 @@ const capitainerie = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Port', capitainerie);
+module.exports = mongoose.model('Port', capitainerie); //exportation du Schema
