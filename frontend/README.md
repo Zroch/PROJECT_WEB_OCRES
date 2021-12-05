@@ -24,6 +24,20 @@ Concernant la planification des taches nous avons utilisés un calendrier classi
 - Routes, Models, Controllers / Alexis.
 - Intégration du backend au frontend / Lucas & Alexis.
 
+
+
+
+Pour initialiser le projet :
+    - Ouvrir un terminal
+    - cd backend
+    - nodemon server 
+    - Ouvir un second terminal 
+    - cd frontend
+    - npm start
+
+    
+
+
 Auteurs :
         Lucas LESCOT & Alexis YOUF
     
