@@ -26,24 +26,14 @@ class Print extends Component {
                 // Recupere uniquement la propriété data
 
                 const { ports } = data;
-                console.log(ports);
+                //console.log(ports);
                 const liste = [ports[0], ports[1]];
-                console.log(liste);
+                //console.log(liste);
                 this.setState({ liste });
             })
             .catch(console.error);
     };
 
-    putDataToDBZ = (city, name, adresse, horaire, price) => {
-      axios.post("http://localhost:3000/api/ports", { 
-          name: name,
-          city: city,
-          adresse: adresse,
-          horaire: horaire,
-          price: price
-        });
-        
-      };
 
     render() {
         //On appelle les données récupérées
