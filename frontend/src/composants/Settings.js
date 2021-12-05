@@ -1,6 +1,8 @@
 //Les imports
 import "../styles/Settings.css";
 import React, { Component } from "react";
+import Form from "../integrer/Form";
+import '../styles/Apis.css'
 
 //Composant permettant à l'utilisateur de changer le nom de la ville 
 //Ce changement va impacter tous les autres composants avec pour paramètre la variable city
@@ -28,14 +30,17 @@ class Settings extends Component {
   render() {
     return (
       <div className="Reglage">
-        <label>
-          Entrer le nom de la ville :
+        <div>
+          <h3>Entrer le nom de la ville :</h3>
           <input
             type="text"
             value={global.config.i18n.city}
             onChange={event => this.handleChange(event)}
           />
-        </label>
+        </div>
+        <div className="margtop">
+          <Form />
+        </div>
       </div>
     );
   }

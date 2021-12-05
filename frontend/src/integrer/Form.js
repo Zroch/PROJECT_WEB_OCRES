@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from "axios";
-import Print from './Print';
 
 
 class Form extends Component {
@@ -15,30 +14,9 @@ class Form extends Component {
           price: 0,
         };
     }
-    componentDidMount() {
-      this.getDataFromDb();
-      if (!this.state.intervalIsSet) {
-        let interval = setInterval(this.getDataFromDb, 1000);
-        this.setState({ intervalIsSet: interval });
-      }
-    }
-  
-    componentWillUnmount() {
-      if (this.state.intervalIsSet) {
-        clearInterval(this.state.intervalIsSet);
-        this.setState({ intervalIsSet: null });
-      }
-    }
-  
-    //afficher un type
-    getDataFromDb = () => {
-      fetch("http://localhost:3000/api/ports")
-        .then(data => data.json())
-        .then(res => this.setState({ data: res.data }));
-    };
 
-    putDataToDBZ = (city, name, adresse, horaire, price) => {
-      axios.post("http://localhost:3000/api/ports/", { 
+    postData = (city, name, adresse, horaire, price) => {
+      axios.post("http://localhost:3000/api/ports", { 
           name: name,
           city: city,
           adresse: adresse,
@@ -59,11 +37,11 @@ class Form extends Component {
              
                       <div class="form-row">
                         <div class="form-group col-md-6">
-                          <label for="inputcity">city</label>
+                          <label for="inputcity">Ville</label>
                           <input type="text" onChange={e => this.setState({ city: e.target.value })} class="form-control" id="inputcity"/>
                         </div>
                         <div class="form-group col-md-6">
-                          <label for="inputName">Name</label>
+                          <label for="inputName">Nom du port</label>
                           <input type="text"  onChange={e => this.setState({ name: e.target.value })} class="form-control" id="inputName"/>
                         </div>
                       </div>
@@ -81,12 +59,12 @@ class Form extends Component {
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6">
-                          <label for="inputPrice">Price</label>
+                          <label for="inputPrice">Prix</label>
                           <input type="text" onChange={e => this.setState({ price: e.target.value })} class="form-control" id="inputPrice"/>
                         </div>
                       </div>
                       
-                      <button className="btn btn-success" onClick={() => this.putDataToDBZ(this.state.city, this.state.name, this.state.adresse, this.state.horaire, this.state.price)}>
+                      <button className="btn btn-success" onClick={() => this.postData(this.state.city, this.state.name, this.state.adresse, this.state.horaire, this.state.price)}>
                         Ajouter
                       </button>
                  
