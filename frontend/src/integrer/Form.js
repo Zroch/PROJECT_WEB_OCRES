@@ -25,9 +25,18 @@ class Form extends Component {
           price: price
         
         })
+
         .then(response => {
           window.alert(`le port ${name} de la ville de ${city} a bien été ajouté`);
-        });
+          console.log(response)
+        })
+
+        .catch(error => {
+          window.alert(`Erreur, impossible `);
+          console.log(error)
+        });        
+        
+        
       };
       
       deleteData = id => {
@@ -71,9 +80,7 @@ class Form extends Component {
                 <input type="text" onChange={e => this.setState({ id: e.target.value })} class="form-control" id="inputid"/>
 
                 <button className="btndelete" onClick={() => this.deleteData(this.state.id)}>Supprimer</button> 
-              </div>
-
-                 
+              </div>                 
             </div>
 
             
