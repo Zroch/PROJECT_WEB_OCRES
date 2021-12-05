@@ -38,7 +38,7 @@ class Form extends Component {
     };
 
     putDataToDBZ = (city, name, adresse, horaire, price) => {
-      axios.post("http://localhost:3000/api/ports", { 
+      axios.post("http://localhost:3000/api/ports/", { 
           name: name,
           city: city,
           adresse: adresse,
