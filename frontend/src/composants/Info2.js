@@ -59,9 +59,9 @@ class Info2 extends React.Component {
             </button >
 
             <button className="butts">
-              <NavLink to="/visibilite" className="navlink"
+              <NavLink to="/ports" className="navlink"
                 activeClassName="nav-active">
-                Back
+                Ports
               </NavLink>
             </button >
           </div>

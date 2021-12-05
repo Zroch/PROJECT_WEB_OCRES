@@ -26,6 +26,7 @@ function App() {
         <Route exact path="vent" element={<Information3 />}/>
         <Route exact path="maree" element={<Information4 />}/>
         <Route exact path="astronomie" element={<Information5 />}/>
+        <Route exact path="ports" element={<Information6 />}/>
         <Route path="*" element={<Notfound />}/>
       </Routes>
   );
