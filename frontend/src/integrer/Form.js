@@ -8,7 +8,6 @@ class Form extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          id:0,
           city: null,
           name: null,
           adresse: null,
@@ -96,9 +95,7 @@ class Form extends Component {
                 </div>    
               </div>
               <br/>
-
-             
-             
+              
               
               
         </div>

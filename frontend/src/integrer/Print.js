@@ -7,13 +7,12 @@ class Print extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            //liste: null
-            city: null, 
+            city: null,
             name: null,
             adresse: null,
             horaire: null,
             price: 0,
-        };
+          };
     }
 
     
@@ -43,6 +42,7 @@ class Print extends Component {
           horaire: horaire,
           price: price
         });
+        
       };
 
     render() {
