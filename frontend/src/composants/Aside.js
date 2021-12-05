@@ -16,21 +16,21 @@ function Aside() {
         <li class="row">
           <NavLink to="/"  className="hover" 
           activeClassName="nav-active">
-            Overview
+            <div className="navbar">Overview</div>
           </NavLink>
         </li>
 
         <li class = "row" >
           <NavLink to="/plusinfo"  className="hover" 
           activeClassName="nav-active">
-            Plus d'infos
+            <div className="navbar">Plus d'infos</div>
           </NavLink>
         </li>
 
         <li class = "row" >
           <NavLink to="/reglages"  className="hover"
           activeClassName="nav-active">
-            Réglages
+            <div className="navbar">Réglages</div>
           </NavLink>
         </li>
 
