@@ -7,7 +7,12 @@ class Print extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            liste: null
+            //liste: null
+            city: null, 
+            name: null,
+            adresse: null,
+            horaire: null,
+            price: 0,
         };
     }
 
@@ -30,6 +35,16 @@ class Print extends Component {
             .catch(console.error);
     };
 
+    putDataToDBZ = (city, name, adresse, horaire, price) => {
+      axios.post("http://localhost:3000/api/ports", { 
+          name: name,
+          city: city,
+          adresse: adresse,
+          horaire: horaire,
+          price: price
+        });
+      };
+
     render() {
         //On appelle les données récupérées
         const { liste } = this.state;
@@ -43,18 +58,25 @@ class Print extends Component {
                         <li key={item._id}>
                             <h3 className="margtop">Ville : {item.city}</h3>
                             <p><h5>Nom :</h5> {item.name}</p>
+                            <p><h5>id : </h5> {item._id}</p>
                             <p><h5>Adresse :</h5> {item.adresse}</p>
                             <p><h5>Horaires :</h5> {item.horaire}</p>
-                            <p><h5>Prix :</h5> {item.price}</p>
+                            <p><h5>Prix par nuit :</h5> {item.price}</p>
                         </li>
                     ))}
                 </ul>
 
             </div>
+
+
+
+
         );
     }
 }
-
-
-
 export default Print;
+
+
+
+
+

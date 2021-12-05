@@ -3,8 +3,14 @@ const Port = require('../models/portmodel');
 
 //createPort nous permet d'ajouter un port à la base de données
 exports.createPort = (req,res) => {
-    const capitainerie = new Port(req.body); //appel du schéma Port.
-
+    const capitainerie = new Port({
+        city: req.body.city,
+        name: req.body.name,
+        adresse: req.body.adresse,
+        horaire: req.body.horaire,
+        price: req.body.price
+    }); //appel du schéma Port.
+    
     capitainerie.save() //sauvegarde la nouvelle donnée
     .then((port) => {
         return res.status(201).json({port}) //201 correpond à la création

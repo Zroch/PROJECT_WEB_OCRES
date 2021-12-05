@@ -6,7 +6,7 @@ const PortCtrl = require('../controllers/portcontroller');
 //la route permet d'appeler la bonne logique de controle.
 
 //appels des différents controleurs.
-router.post('/add', PortCtrl.createPort); //create
+router.post('/', PortCtrl.createPort); //create
 router.get('/:id', PortCtrl.getOnePort); // get one
 router.get('/', PortCtrl.getAllPorts); //get all
 router.put('/:id', PortCtrl.updateOnePort); //update one
