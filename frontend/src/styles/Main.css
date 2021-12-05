@@ -75,3 +75,39 @@
     margin-bottom: 5%;
 
 }
+
+@media screen and (max-width: 650px) {
+    .titre {
+        font-size: 0.55rem;
+        float: center;
+  }
+}
+@media screen and (min-width: 650px) {
+    .titre {
+        font-size: 0.30rem;
+        float: center;
+  }
+}
+
+@media screen and (min-width: 750px) {
+    .titre {
+        font-size: 0.55rem;
+        float: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+    .titre {
+        font-size: 0.9rem;
+        float: center;
+  }
+}
+
+
+@media screen and (min-width: 1400px) {
+    .titre {
+        font-size: 1.25rem;
+        float: center;
+   
+  }
+}

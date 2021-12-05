@@ -11,9 +11,10 @@ class Info4 extends React.Component {
 
   render() {
     return (
+      //Les boutons sont affichés à l'aide de Navlink
       <div class="container">
 
-<div class="row">
+        <div class="row">
           <h1 className="font">Overview</h1>
         </div>
 
@@ -22,21 +23,21 @@ class Info4 extends React.Component {
             <button className="butts">
               <NavLink to="/" className="navlink"
                 activeClassName="nav-active">
-                Méteo 
+                <div className="titre">Méteo</div>
               </NavLink>
             </button >
 
             <button className="butts">
               <NavLink to="/visibilite" className="navlink"
                 activeClassName="nav-active">
-                Visiblité
+                <div className="titre">Visiblité</div>
               </NavLink>
             </button >
 
             <button className="butts">
               <NavLink to="/vent" className="navlink"
                 activeClassName="nav-active">
-                Vent
+                <div className="titre">Vent</div>
               </NavLink>
             </button >
           </div>
@@ -44,24 +45,24 @@ class Info4 extends React.Component {
 
         <div class="row" >
           <div class="col" className="top">
-          <button className="butts">
+            <button className="butts">
               <NavLink to="/maree" className="navlink"
                 activeClassName="nav-active">
-                Marée
+                <div className="titre">Marée</div>
               </NavLink>
             </button >
 
             <button className="butts">
               <NavLink to="/astronomie" className="navlink"
                 activeClassName="nav-active">
-                Astronomie
+                <div className="titre">Astronomie</div>
               </NavLink>
             </button >
 
             <button className="butts">
               <NavLink to="/ports" className="navlink"
                 activeClassName="nav-active">
-                Ports
+                <div className="titre">Ports</div>
               </NavLink>
             </button >
           </div>
