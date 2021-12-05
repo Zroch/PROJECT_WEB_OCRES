@@ -74,7 +74,6 @@ class Info6 extends React.Component {
             <article>
 
               <Print />
-              <Form />
 
             </article>
           </div>
