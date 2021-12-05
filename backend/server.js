@@ -1,6 +1,11 @@
 //imports
 const http = require('http');
-const app = require('./app');
+//const app = require('./app');
+
+var express = require('express');
+var cors = require('cors');
+var app = express();
+app.use(cors());
 
 //lancement du serveur app à l'adresse localhost.
 const server = http.createServer(app);
