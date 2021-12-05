@@ -43,8 +43,12 @@ class Form extends Component {
         axios.delete(`http://localhost:3000/api/ports/${id}`)
         .then(response => {
           window.alert(`le port ${id} a bien été supprimé`);
-          
-      });
+          console.log(response)  
+        })
+        .catch(error => {
+          window.alert(`Erreur, impossible `);
+          console.log(error)
+        });
     };
 
     updateData = (id, city, name, adresse, horaire, price) => {
@@ -58,13 +62,17 @@ class Form extends Component {
           price: price
       })
       .then(response => {
-        window.alert(`le port ${id} a été mit à jour`);
+        window.alert(`le port ${id} a bien été mit à jours`);
+        console.log(response)  
+      })
+      .catch(error => {
+        window.alert(`Erreur, impossible `);
+        console.log(error)
+      });
       
-    });
   };
 
     render () {
-        const { data } = this.state;
         return (
           <div className = "form">
             <div className = "post">
