@@ -14,7 +14,7 @@
 Concernant la planification des taches nous avons utilisés un calendrier classique, avec différents objectifs majeurs.
 
 - Mise en place du design général du site / Lucas.
-- Responsive / Lucas.
+- Responsive / Lucas & Lucas.
 - Intégration de la première API / Lucas.
 - Mise en place d'une variable globale / Alexis.
 - Recherche d'api / Alexis & Lucas.
@@ -24,7 +24,19 @@ Concernant la planification des taches nous avons utilisés un calendrier classi
 - Routes, Models, Controllers / Alexis.
 - Intégration du backend au frontend / Lucas & Alexis.
 
-
+Librairies utilisées : 
+    - nodejs
+    - nodemon
+    - express
+    - mongodb
+    - mongoose
+    - cors
+    - react
+    - bootstrap
+    - axios
+    - recharts
+    - react router-dom
+    - bodyparser
 
 
 Pour initialiser le projet :
