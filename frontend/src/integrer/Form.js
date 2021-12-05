@@ -7,6 +7,7 @@ class Form extends Component {
     constructor(props) {
         super(props);
         this.state = {
+          id:0,
           city: null,
           name: null,
           adresse: null,
@@ -24,59 +25,56 @@ class Form extends Component {
           price: price
         });
       };
+      
+      deleteData = id => {
+        console.log(id);
+        axios.delete(`http://localhost:3000/type/${id}`)
+        .then(response => {
+          console.log(response);
+        
+      });
+    };
 
     render () {
         const { data } = this.state;
         return (
-          <div>
+          <div className = "form">
+            <div className = "post">
               <h2>Ajouter un port</h2>
               <br></br>
-              <div className='container'>
-                <div className='row'>
-                  <div className='col-md-12'>
-             
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputcity">Ville</label>
-                          <input type="text" onChange={e => this.setState({ city: e.target.value })} class="form-control" id="inputcity"/>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="inputName">Nom du port</label>
-                          <input type="text"  onChange={e => this.setState({ name: e.target.value })} class="form-control" id="inputName"/>
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputAdresse">Adresse</label>
-                          <input type="text" onChange={e => this.setState({ adresse: e.target.value })} class="form-control" id="inputAdresse"/>
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputHoraires">Horaires</label>
-                          <input type="text" onChange={e => this.setState({ horaire: e.target.value })} class="form-control" id="inputHoraires"/>
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputPrice">Prix</label>
-                          <input type="text" onChange={e => this.setState({ price: e.target.value })} class="form-control" id="inputPrice"/>
-                        </div>
-                      </div>
+                  <label for="inputcity">Ville</label>
+                  <input type="text" onChange={e => this.setState({ city: e.target.value })} class="form-control" id="inputcity"/>
+                       
+                  <label for="inputName">Nom du port</label>
+                  <input type="text"  onChange={e => this.setState({ name: e.target.value })} class="form-control" id="inputName"/>
+                       
+                  <label for="inputAdresse">Adresse</label>
+                  <input type="text" onChange={e => this.setState({ adresse: e.target.value })} class="form-control" id="inputAdresse"/>
                       
-                      <button className="btn btn-success" onClick={() => this.postData(this.state.city, this.state.name, this.state.adresse, this.state.horaire, this.state.price)}>
-                        Ajouter
-                      </button>
-                 
-                  </div> 
-                            
-                </div>    
-              </div>
+                  <label for="inputHoraires">Horaires</label>
+                  <input type="text" onChange={e => this.setState({ horaire: e.target.value })} class="form-control" id="inputHoraires"/>
+                       
+                  <label for="inputPrice">Prix</label>
+                  <input type="text" onChange={e => this.setState({ price: e.target.value })} class="form-control" id="inputPrice"/>                      
+                      
+                  <button className="btnpost" onClick={() => this.postData(this.state.city, this.state.name, this.state.adresse, this.state.horaire, this.state.price)}>Ajouter</button> 
+              </div> 
               <br/>
-              
-              
-              
-        </div>
+              <div className = "delete">
+                <h2>Supprimer un port</h2>
+                <label for="id">ID</label>
+                <input type="text" onChange={e => this.setState({ id: e.target.value })} class="form-control" id="inputid"/>
+
+                <button className="btndelete" onClick={() => this.deleteData(this.state.id)}>Supprimer</button> 
+              </div>
+
+                 
+            </div>
+
+            
+
+          
+          
         )
       }
 
