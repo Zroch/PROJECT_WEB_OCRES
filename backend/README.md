@@ -5,7 +5,6 @@
         Nombre de places visiteurs
         Horaires
         Prix
-        Présence de portes ou non
         
     Nous utilisons une base de données MONGODB cloud atlas.
     Nous utlisons moogose pour créer des schémas.

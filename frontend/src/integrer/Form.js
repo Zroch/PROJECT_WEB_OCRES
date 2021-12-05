@@ -62,7 +62,7 @@ class Form extends Component {
           price: price
       })
       .then(response => {
-        window.alert(`le port ${id} a bien été mit à jours`);
+        window.alert(`le port ${id} a bien été mis à jours`);
         console.log(response)  
       })
       .catch(error => {
@@ -129,14 +129,7 @@ class Form extends Component {
 
                 <button className="btnupdate" onClick={() => this.updateData(this.state.id, this.state.city, this.state.name, this.state.adresse, this.state.horaire, this.state.price)}>Updater</button> 
               </div>
-
-                 
             </div>
-
-            
-
-          
-          
         )
       }
 
