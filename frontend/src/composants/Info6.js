@@ -2,18 +2,18 @@
 import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
-
+import Print from '../integrer/Print';
 
 //Ce compostant permet dafficher les boutons et l'information numéro 6 qui est le backend 
 
 class Info6 extends React.Component {
-//Les boutons sont affichés à l'aide de Navlink
+  //Les boutons sont affichés à l'aide de Navlink
 
   render() {
     return (
       <div class="container">
 
-<div class="row">
+        <div class="row">
           <h1 className="font">Overview</h1>
         </div>
 
@@ -22,7 +22,7 @@ class Info6 extends React.Component {
             <button className="butts">
               <NavLink to="/" className="navlink"
                 activeClassName="nav-active">
-                Méteo 
+                Méteo
               </NavLink>
             </button >
 
@@ -44,7 +44,7 @@ class Info6 extends React.Component {
 
         <div class="row" >
           <div class="col" className="top">
-          <button className="butts">
+            <button className="butts">
               <NavLink to="/maree" className="navlink"
                 activeClassName="nav-active">
                 Marée
@@ -66,18 +66,18 @@ class Info6 extends React.Component {
             </button >
           </div>
         </div>
-        
+
         <div class="row">
           <div className="mid">
             <article>
-            
-            
-            
+
+              <Print />
+
             </article>
           </div>
         </div>
       </div>
-      
+
 
     );
   }

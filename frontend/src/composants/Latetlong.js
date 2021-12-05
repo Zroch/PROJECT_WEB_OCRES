@@ -1,6 +1,6 @@
 //Les imports
 import React, { Component } from "react";
-import TidesAPI from "../js/tidesAPI";
+import TidesAPI from "../js/TidesAPI";
 import "../styles/Apis.css";
 
 class Latetlong extends Component {

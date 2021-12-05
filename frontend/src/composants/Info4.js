@@ -70,7 +70,7 @@ class Info4 extends React.Component {
           <div className="mid">
             <article>
 
-              <LatetlongAPI city1={global.config.i18n.city} />
+              {/*<LatetlongAPI city1={global.config.i18n.city} />*/}
 
             </article>
           </div>
