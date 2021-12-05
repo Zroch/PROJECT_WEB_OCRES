@@ -30,7 +30,7 @@ function PlusInfo() {
             <li>Le vent</li>
             <li>La marée</li>
             <li>L'astronomie</li>
-            <li>Les informations sur le port le plus proche</li>
+            <li>Les informations sur les ports de notre base de données</li>
           </div>
           <h2>BackEnd :</h2>
           Par la suite les utilisateurs pourront alors rentrer les informations sur la capitainerie d'un port associé à une ville.
@@ -39,7 +39,6 @@ function PlusInfo() {
             <li>Nombre de places visiteurs</li>
             <li>Horaires</li>
             <li>Prix</li>
-            <li>Présence de portes ou non</li>
           </div>
 
            <h3>Auteurs :</h3>

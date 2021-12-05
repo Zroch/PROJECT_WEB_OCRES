@@ -41,7 +41,11 @@ class Print extends Component {
                 <ul>
                     {liste.map(item => (
                         <li key={item._id}>
-                            {item.city}{item.name}{item.adress}{item.horaire}{item.price}
+                            <h3 className="margtop">Ville : {item.city}</h3>
+                            <p><h5>Nom :</h5> {item.name}</p>
+                            <p><h5>Adresse :</h5> {item.adresse}</p>
+                            <p><h5>Horaires :</h5> {item.horaire}</p>
+                            <p><h5>Prix :</h5> {item.price}</p>
                         </li>
                     ))}
                 </ul>
