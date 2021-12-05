@@ -28,7 +28,7 @@ class Form extends Component {
       
       deleteData = id => {
         console.log(id);
-        axios.delete(`http://localhost:3000/type/${id}`)
+        axios.delete(`http://localhost:3000/api/ports/${id}`)
         .then(response => {
           console.log(response);
         
