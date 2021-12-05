@@ -25,9 +25,18 @@ class Form extends Component {
           price: price
         
         })
+
         .then(response => {
           window.alert(`le port ${name} de la ville de ${city} a bien été ajouté`);
-        });
+          console.log(response)
+        })
+
+        .catch(error => {
+          window.alert(`Erreur, impossible `);
+          console.log(error)
+        });        
+        
+        
       };
       
       deleteData = id => {

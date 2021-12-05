@@ -3,7 +3,6 @@ import '../styles/Main.css';
 import React from "react";
 import { NavLink } from 'react-router-dom';
 import Print from '../integrer/Print';
-import Form from '../integrer/Form';
 
 //Ce compostant permet dafficher les boutons et l'information numéro 6 qui est le backend 
 

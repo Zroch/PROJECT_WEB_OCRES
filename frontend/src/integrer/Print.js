@@ -44,7 +44,7 @@ class Print extends Component {
 
                 <ul>
                     {ports.map(item => (
-                        <li key={item._id}>
+                        <li className="sans" key={item._id}>
                             <h3 className="margtop">Ville : {item.city}</h3>
                             <p><h5>Nom :</h5> {item.name}</p>
                             <p><h5>id : </h5> {item._id}</p>
