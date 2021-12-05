@@ -71,9 +71,7 @@ class Info6 extends React.Component {
         <div class="row">
           <div className="mid">
             <article>
-
-              <Print />
-
+              <Print/>
             </article>
           </div>
         </div>

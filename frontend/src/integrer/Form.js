@@ -23,13 +23,17 @@ class Form extends Component {
           adresse: adresse,
           horaire: horaire,
           price: price
+        
+        })
+        .then(response => {
+          window.alert(`le port ${name} de la ville de ${city} a bien été ajouté`);
         });
       };
       
       deleteData = id => {
         axios.delete(`http://localhost:3000/api/ports/${id}`)
         .then(response => {
-          console.log(response);
+          window.alert(`le port ${id} a bien été supprimé`);
         
       });
     };
@@ -56,7 +60,9 @@ class Form extends Component {
                   <label for="inputPrice">Prix</label>
                   <input type="text" onChange={e => this.setState({ price: e.target.value })} class="form-control" id="inputPrice"/>                      
                       
-                  <button className="btnpost" onClick={() => this.postData(this.state.city, this.state.name, this.state.adresse, this.state.horaire, this.state.price)}>Ajouter</button> 
+                  <button className="btnpost" onClick={() => this.postData(this.state.city, this.state.name, this.state.adresse, this.state.horaire, this.state.price)}>
+                    Ajouter
+                    </button> 
               </div> 
               <br/>
               <div className = "delete">
