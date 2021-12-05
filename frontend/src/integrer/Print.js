@@ -16,7 +16,7 @@ class Print extends Component {
     componentDidMount() {
         axios
             //On fait une demande au back end ouvert sur le port 3000
-            .get("http://localhost:3000/ports")
+            .get("http://localhost:3000/api/ports")
             .then(({ data }) => {
                 console.log(data);
                 // Recupere uniquement la propriété data
