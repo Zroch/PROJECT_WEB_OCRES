@@ -25,11 +25,10 @@ class Print extends Component {
                 console.log(data);
                 // Recupere uniquement la propriété data
 
+                //On selectionne le tableau contenant chaque port
                 const { ports } = data;
-                //console.log(ports);
-                const liste = [ports[0], ports[1]];
-                //console.log(liste);
-                this.setState({ liste });
+               
+                this.setState({ ports });
             })
             .catch(console.error);
     };
@@ -37,14 +36,14 @@ class Print extends Component {
 
     render() {
         //On appelle les données récupérées
-        const { liste } = this.state;
-        if (!liste) return <p>Loading...</p>;
+        const { ports } = this.state;
+        if (!ports) return <p>Loading...</p>;
         return (
 
             <div className="center">
 
                 <ul>
-                    {liste.map(item => (
+                    {ports.map(item => (
                         <li key={item._id}>
                             <h3 className="margtop">Ville : {item.city}</h3>
                             <p><h5>Nom :</h5> {item.name}</p>
