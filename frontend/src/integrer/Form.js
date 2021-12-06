@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 class Form extends Component {
-
+    //différentes vairables 
     constructor(props) {
         super(props);
         this.state = {
@@ -15,7 +15,7 @@ class Form extends Component {
           price: 0,
         };
     }
-
+    //create new 
     postData = (city, name, adresse, horaire, price) => {
       axios.post("http://localhost:3000/api/ports", { 
           name: name,
@@ -25,12 +25,12 @@ class Form extends Component {
           price: price
         
         })
-
+        //réussite
         .then(response => {
           window.alert(`le port ${name} de la ville de ${city} a bien été ajouté`);
           console.log(response)
         })
-
+        //erreur
         .catch(error => {
           window.alert(`Erreur, impossible `);
           console.log(error)
@@ -38,19 +38,21 @@ class Form extends Component {
         
         
       };
-      
+      //delete
       deleteData = id => {
         axios.delete(`http://localhost:3000/api/ports/${id}`)
-        .then(response => {
+        //réussite
+        .then(response => { 
           window.alert(`le port ${id} a bien été supprimé`);
           console.log(response)  
         })
+        //erreur
         .catch(error => {
           window.alert(`Erreur, impossible `);
           console.log(error)
         });
     };
-
+    //update
     updateData = (id, city, name, adresse, horaire, price) => {
 
       axios.put(`http://localhost:3000/api/ports/${id}`, {
@@ -61,10 +63,12 @@ class Form extends Component {
           horaire: horaire,
           price: price
       })
+      //réussite
       .then(response => {
         window.alert(`le port ${id} a bien été mis à jours`);
         console.log(response)  
       })
+      //erreur
       .catch(error => {
         window.alert(`Erreur, impossible `);
         console.log(error)
